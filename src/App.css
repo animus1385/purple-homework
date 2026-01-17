@@ -20,9 +20,27 @@
 	max-width: 1160px;
 	margin: 0 auto;
 	width: 100%;
-  padding: 0 20px;
+	padding: 0 20px;
 }
-
+.background-app {
+	position: fixed;
+	z-index: -1;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.content-list {
+	margin-bottom: 58px;
+}
+.button-reset {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+}
 @keyframes logo-spin {
 	from {
 		transform: rotate(0deg);
