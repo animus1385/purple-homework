@@ -1,7 +1,7 @@
-import './Paraph.css'
+import styles from './Paraph.module.css'
 
 function Paraph({ children }) {
-	return <p className='paraph'>{children}</p>
+	return <p className={styles.paraph}>{children}</p>
 }
 
 export default Paraph

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Button from '../Button/Button'
 import Input from '../Input/Input'
-import './Search.css'
+import styles from './Search.module.css'
 
 function Search({ onSearch, data }) {
 	const [searchElem, setSearchElem] = useState('')
@@ -15,22 +15,21 @@ function Search({ onSearch, data }) {
 		if (searchElem.trim() === '') {
 			onSearch(data)
 		} else {
-			const filtered = data.filter(item => item.title.toLowerCase().includes(searchElem.toLowerCase()))
+			const filtered = data.filter(item =>
+				item.title.toLowerCase().includes(searchElem.toLowerCase())
+			)
 			onSearch(filtered)
 		}
 	}
 	return (
-		<form className='search' onSubmit={handlerSearchBtn}>
+		<form className={styles.search} onSubmit={handlerSearchBtn}>
 			<Input
-				className='search__input'
 				srcIcon='/src/assets/search.svg'
 				placeholder='Введите название'
 				onChange={handlerSearch}
 				value={searchElem}
 			/>
-			<Button className='search__btn' type='submit'>
-				Искать
-			</Button>
+			<Button type='submit'>Искать</Button>
 		</form>
 	)
 }

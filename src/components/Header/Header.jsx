@@ -1,10 +1,14 @@
-import './Header.css'
 
+import classNames from 'classnames'
+import styles from './Header.module.css'
 function Header({ items }) {
 	return (
-		<header className='header'>
-			<div className='header__container container'>
-				<img className='header__logo' src='/src/assets/logo.svg' alt='logo' />
+		<header className={styles.header}>
+			<div className={classNames({
+				'container':true,
+				[styles['header__container']]:true
+			})}>
+				<img className={styles['header__logo']} src='/src/assets/logo.svg' alt='logo' />
 				<nav className='header__nav'>
 					<ul className='header__list'>
 						{items.map((e, index) => {
