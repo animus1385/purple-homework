@@ -1,10 +1,11 @@
-import './HeaderMain.css'
+import classNames from 'classnames'
+import styles from './HeaderMain.module.css'
 
 function HeaderMain({ children }) {
 	return (
-		<section className='header-main'>
-			<div className='container header-main__container'>
-				<div className='header-main__content'>{children}</div>
+		<section className={styles.headerMain}>
+			<div className={classNames('container', styles.container)}>
+				<div className={styles.content}>{children}</div>
 			</div>
 		</section>
 	)

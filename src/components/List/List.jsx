@@ -1,13 +1,12 @@
 import Card from '../Card/Card'
-import './List.css'
+import styles from './List.module.css'
 
 function List({ items, setList, setFilteredList }) {
 	return (
-		<ul className='list'>
+		<ul className={styles.list}>
 			{items.map((e, index) => {
 				return (
 					<Card
-						className='list__elem'
 						title={e.title}
 						srcImg={e.srcImg}
 						like={e.like}

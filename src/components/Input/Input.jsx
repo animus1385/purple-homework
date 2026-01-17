@@ -1,10 +1,16 @@
-import './Input.css'
+import styles from './Input.module.css'
 
-function Input({srcIcon, onChange, value, placeholder = 'введите текст'}) {
+function Input({ srcIcon, onChange, value, placeholder = 'введите текст' }) {
 	return (
-		<div className='custom-input'>
-			<img className='custom-input__icon' src={srcIcon} alt='icons'/>
-			<input className='custom-input__input' type='text' onChange={onChange} value={value} placeholder={placeholder} />
+		<div className={styles.customInput}>
+			<img className={styles.icon} src={srcIcon} alt='icons' />
+			<input
+				className={styles.input}
+				type='text'
+				onChange={onChange}
+				value={value}
+				placeholder={placeholder}
+			/>
 		</div>
 	)
 }

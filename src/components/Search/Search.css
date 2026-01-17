@@ -1,6 +1,0 @@
-.search {
-	display: grid;
-	grid-template-columns: 384px 119px;
-	gap: 8px;
-	min-height: 64px;
-}
